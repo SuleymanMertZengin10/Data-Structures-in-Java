@@ -4,40 +4,56 @@ public class TestSingleLinkedList {
 	public static void main(String[] args) {
 	  SingleLinkedList<String>liste=new SingleLinkedList<>();
  
-	  liste.addFirst("1");
+	  liste.add("1");
       System.out.println(liste.getSize()); 
-      liste.addLast("2");
+      liste.add("2");
       System.out.println(liste.getSize());
-      liste.addLast("3");
+      liste.add("3");
       System.out.println(liste.getSize());
       System.out.println("---------------------");
       System.out.println("İlk eleman"+liste.first());
       System.out.println("son eleman"+liste.last());
  
-      liste.addLast("4");
-      liste.addLast("5");
-      liste.addLast("6");
-      liste.addLast("7");
-      liste.addLast("8");
-      liste.addLast("9");      
+      liste.add("4");
+      liste.add("5");
+      liste.add("6");
+      liste.add("7");
+      liste.add("8");
+      liste.add("9");  
+      
       liste.findMiddleElement();
       
       liste.printElement(); 
      
       liste.findMiddleElement();
       
-      liste.addLast("10");
-      liste.addLast("12");
-      liste.addLast("13");
+      liste.add("10");
+      liste.add("12");
+      liste.add("13");
       
       liste.printElement(); 
       
       
       liste.findMiddleElement();
       
-     
+     // liste.addMiddle("21");
       
-		
+      liste.printElement(); 
+      
+      liste.removeNode("1");
+      
+      System.out.println("after deleting node");
+      
+      liste.printElement(); 
+      System.out.println(liste.getSize());
+      
+      //indisler 0 dan başlandığı düşünülür
+      liste.removeNodeByPosition(2);
+      liste.printElement();
+      
+      liste.removeNodeByPosition(0);
+      liste.printElement();
+      System.out.println(liste.getSize());
 	}
 
 }
